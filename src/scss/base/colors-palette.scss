@@ -1,0 +1,154 @@
+$pc: 1440px; // Планшети, деякі телефони в горизонтальному положенні
+$tablet: 1024px; // Телефони L
+$mobile: 768px; // Телефони S
+$mobileSmall: 480px; // Телефони S
+$mobileSmallXs: 420px; // Телефони S
+:root {
+  /* Общие стили */
+  --heading-font-family: "Dosis";
+  --body-font-family: "Urbanist";
+  --font-line-height: 150%;
+
+  /* Размеры шрифтов */
+  --font-size-h1: 40px;
+  --font-size-h2: 32px;
+  --font-size-h3: 20px;
+  --font-size-h4: 18px;
+  --font-size-h5: 16px;
+  --font-size-body-large: 16px;
+  --font-size-body-medium: 14px;
+  --font-size-body-small: 10px;
+  --font-size-body-xsmall: 8px;
+
+  /* Веса шрифтов */
+  --font-weight-700: 700;
+  --font-weight-600: 600;
+  --font-weight-500: 500;
+  --font-weight-400: 400;
+
+  /* Заголовки */
+  --heading-h1: var(--heading-font-family) var(--font-size-h1) var(--font-weight-700) var(--font-line-height);
+  --heading-h2: var(--heading-font-family) var(--font-size-h2) var(--font-weight-700) var(--font-line-height);
+  --heading-h3: var(--heading-font-family) var(--font-size-h3) var(--font-weight-700) var(--font-line-height);
+  --heading-h4: var(--heading-font-family) var(--font-size-h4) var(--font-weight-700) var(--font-line-height);
+  --heading-h5: var(--heading-font-family) var(--font-size-h5) var(--font-weight-700) var(--font-line-height);
+
+  /* Тела текста */
+  --body-xlarge: var(--body-font-family) var(--font-size-body-large) var(--font-weight-700) var(--font-line-height);
+  --body-large: var(--body-font-family) var(--font-size-body-large) var(--font-weight-700) var(--font-line-height);
+  --body-medium: var(--body-font-family) var(--font-size-body-medium) var(--font-weight-700) var(--font-line-height);
+  --body-small: var(--body-font-family) var(--font-size-body-small) var(--font-weight-700) var(--font-line-height);
+  --body-xsmall: var(--body-font-family) var(--font-size-body-xsmall) var(--font-weight-700) var(--font-line-height);
+
+   /* Primary colors */
+   --color-primary-base: rgb(237, 178, 88);
+   --color-primary-50: rgb(254, 249, 242);
+   --color-primary-100: rgb(251, 236, 214);
+   --color-primary-200: rgb(247, 220, 180);
+   --color-primary-300: rgb(243, 205, 147);
+   --color-primary-400: rgb(239, 186, 107);
+   --color-primary-500: rgb(234, 165, 61);
+   --color-primary-600: rgb(220, 141, 24);
+   --color-primary-700: rgb(188, 121, 20);
+   --color-primary-800: rgb(146, 94, 16);
+   --color-primary-900: rgb(81, 52, 9);
+ 
+   /* Secondary colors */
+   --color-secondary-base: rgb(19, 18, 23);
+   --color-secondary-50: rgb(250, 250, 251);
+   --color-secondary-100: rgb(239, 238, 242);
+   --color-secondary-200: rgb(225, 223, 230);
+   --color-secondary-300: rgb(212, 210, 220);
+   --color-secondary-400: rgb(196, 193, 207);
+   --color-secondary-500: rgb(179, 176, 193);
+   --color-secondary-600: rgb(160, 155, 177);
+   --color-secondary-700: rgb(137, 132, 159);
+   --color-secondary-800: rgb(107, 101, 129);
+   --color-secondary-900: rgb(59, 56, 72);
+ 
+   /* Tertiary colors */
+   --color-tertiary-base: rgb(24, 23, 28);
+   --color-tertiary-50: rgb(245, 245, 247);
+   --color-tertiary-100: rgb(239, 238, 241);
+   --color-tertiary-200: rgb(224, 223, 229);
+   --color-tertiary-300: rgb(211, 209, 217);
+   --color-tertiary-400: rgb(196, 194, 205);
+   --color-tertiary-500: rgb(179, 176, 190);
+   --color-tertiary-600: rgb(163, 159, 176);
+   --color-tertiary-700: rgb(134, 130, 152);
+   --color-tertiary-800: rgb(109, 105, 128);
+   --color-tertiary-900: rgb(62, 59, 72);
+ 
+   /* Grayscale colors */
+   --color-grayscale-base: rgb(107, 107, 107);
+   --color-grayscale-50: rgb(246, 246, 246);
+   --color-grayscale-100: rgb(239, 239, 239);
+   --color-grayscale-200: rgb(224, 224, 224);
+   --color-grayscale-300: rgb(210, 210, 210);
+   --color-grayscale-400: rgb(196, 196, 196);
+   --color-grayscale-500: rgb(178, 178, 178);
+   --color-grayscale-600: rgb(161, 161, 161);
+   --color-grayscale-700: rgb(133, 133, 133);
+   --color-grayscale-800: rgb(108, 108, 108);
+   --color-grayscale-900: rgb(61, 61, 61);
+ 
+   /* Other colors */
+   --color-white: rgb(255, 255, 255);
+   --color-black: rgb(0, 0, 0);
+   --color-gray: rgb(15, 14, 18);
+ 
+   /* Green colors */
+   --color-green-base: rgb(69, 128, 22);
+   --color-green-50: rgb(237, 250, 226);
+   --color-green-100: rgb(223, 246, 203);
+   --color-green-200: rgb(192, 238, 155);
+   --color-green-300: rgb(160, 229, 103);
+   --color-green-400: rgb(124, 219, 46);
+   --color-green-500: rgb(109, 200, 34);
+   --color-green-600: rgb(99, 181, 31);
+   --color-green-700: rgb(81, 149, 26);
+   --color-green-800: rgb(66, 121, 21);
+   --color-green-900: rgb(38, 69, 12);
+ 
+   /* Red colors */
+   --color-red-base: rgb(230, 49, 38);
+   --color-red-50: rgb(254, 244, 244);
+   --color-red-100: rgb(253, 235, 234);
+   --color-red-200: rgb(250, 216, 214);
+   --color-red-300: rgb(248, 196, 193);
+   --color-red-400: rgb(245, 175, 171);
+   --color-red-500: rgb(243, 157, 152);
+   --color-red-600: rgb(240, 129, 123);
+   --color-red-700: rgb(234, 83, 75);
+   --color-red-800: rgb(205, 33, 24);
+   --color-red-900: rgb(122, 20, 14);
+ 
+   /* Gradient colors */
+   --gradient-card-empty: rgb(75, 75, 87);
+   --gradient-add-button: rgba(137, 132, 159, 0.3);
+ 
+   /* Element colors */
+   --element-circle-buttons-stroke: rgb(45, 43, 51);
+   --element-popup-stroke: rgb(60, 58, 66);
+   --element-bottom-sheet-background: rgb(19, 18, 23);
+   
+   /* Media Queries */
+   @media (min-width: $pc) {
+    --base-vw: 1920; // Use plain number instead of 1920px
+   }
+   @media (max-width: $pc) {
+      --base-vw: 1440; // Use plain number instead of 992px
+   }
+   @media (max-width: $tablet) {
+      --base-vw: 1024; // Use plain number instead of 768px
+   }
+   @media (max-width: $mobile) {
+      --base-vw: 768; // Use plain number instead of 480px
+   }
+   @media (max-width: $mobileSmall) {
+      --base-vw: 480; // Use plain number instead of 480px
+   }
+   @media (max-width: $mobileSmallXs) {
+      --base-vw: 420; // Use plain number instead of 480px
+   }
+}

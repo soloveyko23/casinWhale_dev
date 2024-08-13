@@ -1,0 +1,84 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.nav-button {
+  @apply transition-colors flex items-center justify-center gap-1 rounded-full bg-secondary-900;
+ 
+  svg path {
+    @apply transition-colors;
+  }
+  &--xl {
+    @apply w-11 h-11;
+    svg {
+      @apply w-5 h-5;
+    }
+  }
+  &--md {
+    @apply w-8 h-8;
+    svg {
+      @apply w-3.5 h-3.5;
+    }
+  }
+  &:hover{
+    background-color: var(--color-primary-base);
+    svg path {
+      stroke: var(--color-white);
+    }
+  }
+  &:active{
+    background-color: var(--color-primary-700);
+    svg path {
+      stroke: var(--color-white);
+    }
+  }
+}
+
+.button {
+  @apply inline-flex items-center gap-2 relative transition-colors duration-300;
+  
+  color: var(--color-primary-900);
+  font-family: var(--body-font-family);
+  font-size: var(--body-large);
+  font-weight: var(--font-weight-700);
+  text-align: center;
+  border: 1px solid var(--color-primary-300);
+  border-radius: 2.5rem;
+  background: var(--color-secondary-900);
+  // overflow: hidden;
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &::after{
+    content:'';
+    transition: all 0.3s;
+    position: absolute;
+    inset: 0px;
+    border-radius: 2.5rem;
+    background: linear-gradient(90.00deg, rgba(176, 127, 52, 0.5) 52.5%,rgba(249, 200, 136, 0.5) 100%),linear-gradient(90.00deg, rgb(249, 200, 136),rgb(122, 85, 30) 100%);
+  }
+  &::before{
+    content:'';
+    display: block;
+    border: 1px solid var(--color-secondary-900);
+    border-radius: 2.5rem;
+    position: absolute;
+    inset: -5px;
+    transition: all 0.3s;
+  }
+  &:hover{
+    border-color: var(--color-secondary-800);
+    color: var(--color-secondary-800);
+    background: var(--color-secondary-900);
+    &::after{
+      opacity: 0;
+    }
+  }
+  &:active{
+    &::before{
+      content:'';
+      transform: scale(1.1);
+      opacity: 0;
+    }
+  }
+}

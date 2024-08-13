@@ -1,0 +1,186 @@
+// Заголовки, загальні БЕМ блоки та інше...
+body, html {
+  background-color: var(--color-secondary-base);
+}
+
+.page {
+  padding: .75rem 0;
+}
+
+[class*="__container"] {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.wrapper-main {
+  @media (min-width:$tablet){
+    display: grid;
+    grid-template-columns: minmax(200px, 252px) calc(100% - 252px); 
+  }
+}
+
+.main-sidebar {
+  &--left {
+    background-color: var(--color-secondary-base);
+    @apply border-r-2 border-secondary-900 border-opacity-50 border-solid px-4 py-6 min-h-svh;
+    @media (max-width:$tablet){
+      position: fixed;
+      z-index: 5;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  &__menu {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      li {
+        a, button {
+          @apply transition-colors;
+          width: 100%;
+          display: flex;
+          padding: 10px .625rem;
+          border-radius: .5rem;
+          span {
+            @apply transition-colors;
+          }
+          &.active{
+            span {
+              color: #fff !important;
+            }
+            svg:not(.arrow) path {
+              fill: var(--color-primary-base);
+            }
+          }
+          &:not(.active) {
+            &:hover{
+              .arrow path{
+                stroke: #fff;
+              
+              }
+              svg:not(.arrow) path {
+                fill: #fff
+              }
+              svg:not(.hover-stroke) path {
+                fill: #fff
+              }
+              svg.hover-stroke  {
+                // path:not(.check) {
+                //   stroke: #fff;
+                // }
+                path.check {
+                  fill: #fff;
+                }
+              }
+            }
+            &:active{
+              background-color: var(--color-tertiary-900);
+            }
+          }
+          &:hover{
+            background-color: var(--color-tertiary-base);
+            span {
+              color: #fff;
+            }
+            .arrow path{
+              stroke: #fff;
+            
+            }
+          }
+          .arrow {
+            transition: all 0.3s;
+          }
+          .arrow path{
+              stroke: var(--color-tertiary-600)
+            
+          }
+          .roadmap-svg path:last-child {
+            stroke: var(--color-secondary-base) !important;
+          }
+          svg path {
+            @apply transition-colors;
+          }
+        }
+      }
+    }
+    .menu {
+      &-dropdown {
+        [data-toggle] {
+          &:active{
+            background-color: var(--color-tertiary-900);
+          }
+          &.active{
+            background-color: var(--color-tertiary-base);
+            span {
+              color: #fff;
+            }
+            svg:not(.arrow) path {
+              fill: #fff
+            }
+            .arrow {
+              transition: all 0.3s;
+              transform: rotate(0) !important;
+            }
+            .arrow path{
+              stroke: #fff;
+              
+            }
+          }
+        }
+        [data-dropdown-menu] {
+          display: none;
+          &.show {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slider-pagination-1 {
+  .swiper-pagination {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    &-lock {
+      display: none;
+    }
+    &-bullet {
+      @apply transition-all;
+      cursor: pointer;
+      border-radius: vw(8);
+      width: vw(8);
+      height: vw(6);
+      background-color: var(--color-secondary-900);
+      @media (any-hover: hover){
+        &:hover{
+          background-color: var(--color-primary-300);
+        }
+      }
+      &-active {
+        width: vw(20);
+        background-color: var(--color-primary-base);
+      }
+    }
+  }
+}
+
+.user-header-info {
+  .balance {
+    &-toggle {
+      @apply rounded-lg transition-colors flex items-center justify-center gap-1 ps-4 pe-2 font-semibold;
+      min-height: 2.625rem;
+      border:  1px solid var(--color-secondary-900);
+      background: linear-gradient(180deg, rgb(43, 41, 52) 0.109%, rgb(20, 19, 24) 100.548%);
+      span {
+        display: inline-flex;align-items: center;
+      }
+      .arrow {
+        margin-left: 6px;
+      }
+    }
+  }
+}
